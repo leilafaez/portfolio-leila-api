@@ -1,8 +1,25 @@
 
-
 const express = require("express");
 const server = express();
+const config = require("./config/dev")
 
+const mongoose = require("mongoose");
+async function connectToDB() {
+  try {
+    await mongoose.connect(
+      config.DB_URI,
+      {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      }
+    );
+    console.log("Connected to DB!");
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+connectToDB();
 
 server.use("/api/v1", require("./routes/portfolio"));
 
