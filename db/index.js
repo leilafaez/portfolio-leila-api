@@ -1,7 +1,8 @@
 const config = require("../config/dev");
 const mongoose = require("mongoose");
-
- async function connectToDB() {
+require("./models/portfolio")
+ 
+async function connectToDB() {
   try {
    await mongoose.connect(config.DB_URI, {
       useNewUrlParser: true,
