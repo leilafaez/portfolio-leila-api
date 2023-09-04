@@ -15,3 +15,8 @@ exports.getPortfolioById = async (req,res)=>{
   }
  
 }
+
+exports.createPortfolio= async(req,res)=>{
+  const data = req.body;
+  return res.json({message : "creating portfolio....."})
+}
