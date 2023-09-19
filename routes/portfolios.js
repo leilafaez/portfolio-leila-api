@@ -8,10 +8,13 @@ const {
   getPortfolios,
   getPortfolioById,
   createPortfolio,
+  updatePortfolio
 } = require("../controllers/portfolios");
 
 router.get("", getPortfolios);
 router.get("/:id", getPortfolioById);
-router.post("",checkJwt,createPortfolio)
+router.post("",checkJwt,createPortfolio);
+router.patch("/:id",checkJwt, updatePortfolio);
+
 
 module.exports=router;
