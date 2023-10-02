@@ -39,3 +39,7 @@ exports.updatePortfolio = async(req,res)=>{
       return res.status(422).send(error.message);
     }
 }
+exports.deletePortfolio = async(req,res)=>{
+  const deletedPortfolio = await Portfolio.findByIdAndRemove({_id : req.params.id});
+  return res.json({_id : deletedPortfolio.id});
+}
