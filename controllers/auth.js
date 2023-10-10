@@ -26,4 +26,3 @@ exports.checkJwt = expressJwt({
   }
 
  }
-//  const midd = (req, res, next) => {};
