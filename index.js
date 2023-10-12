@@ -12,7 +12,11 @@ async function runServer(){
 
     server.get("/test",(req,res)=>{
       res.json({message : "hello world"});
-    })
+    });
+
+    server.get("", (req, res) => {
+       res.json({ message: "Welcome in Portfolio Api Application!" });
+     });
 
     const PORT = parseInt(process.env.PORT,10 ) || 3001;
     server.listen(PORT, (err) => {
