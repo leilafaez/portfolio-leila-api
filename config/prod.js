@@ -8,5 +8,4 @@ module.exports = {
   AUTH0_TOKEN_URL: process.env.AUTH0_TOKEN_URL,
 };
 
-
-//mongodb+srv://leilifaz39:Leila_6925@cluster0.t1422ee.mongodb.net/?retryWrites=true&w=majority
+//mongodb+srv://leilifaz39:<password>@cluster0.t1422ee.mongodb.net/?retryWrites=true&w=majority
