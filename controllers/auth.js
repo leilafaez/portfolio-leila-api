@@ -1,6 +1,6 @@
 const { expressjwt: expressJwt } = require("express-jwt");
 const jwksRsa = require("jwks-rsa");
-const config = require("../config/dev")
+const config = require("../config")
 
 //authentiction middleware
 //this middleware will check access token in authorization header of a req
